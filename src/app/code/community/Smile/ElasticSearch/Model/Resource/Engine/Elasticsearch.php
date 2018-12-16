@@ -433,4 +433,12 @@ class Smile_ElasticSearch_Model_Resource_Engine_Elasticsearch
     {
         return Mage::helper('smile_elasticsearch/elasticsearch');
     }
+    
+    /**
+     * @return boolean
+     */
+    public function isLeyeredNavigationAllowed()
+    {
+        return true;
+    }
 }

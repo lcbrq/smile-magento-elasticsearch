@@ -67,7 +67,8 @@ class Smile_ElasticSearch_Model_Observer
      */
     public function resetCurrentCatalogLayer(Varien_Event_Observer $observer)
     {
-        if (Mage::helper('smile_elasticsearch')->isActiveEngine()) {
+        
+        if (Mage::helper('smile_elasticsearch')->isActiveEngine() && !Mage::helper('core')->isModuleEnabled('Mana_Core')) {
             Mage::register('current_layer', Mage::getSingleton('smile_elasticsearch/catalog_layer'));
         }
 
